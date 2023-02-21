@@ -1,0 +1,101 @@
+//Program 1
+//Multiplication
+/*#include<stdio.h>
+int main(){
+    int a,b,c;
+    a=20;
+    b=6;
+    c=a*b;
+    printf("%d*%d=%d",a,b,c);
+    return 0;
+}*/
+
+//Program 2
+//Area of Circle
+/*#include<stdio.h>
+int main(){
+    float r,a;
+    float pi=3.14;
+    printf("Enter radius: ");
+    scanf("%f",&r);
+    a=pi*r*r;
+    printf("Area is: %f",a);
+    return 0;
+}*/
+
+//Program 3
+//Find the volume of sphere
+
+/*#include<stdio.h>
+int main() {
+    float v,r,pi=3.14;
+    printf("Enter Radius: ");
+    scanf("%f",&r);
+    v=(4*pi*r*r*r)/3;
+    printf("Volume is: %f",v);
+    return 0;
+    
+}*/
+
+//Program 4
+//Find the given year is leap or not
+
+/*#include<stdio.h>
+int main(){
+    int year;
+    printf("Enter year: ");
+    scanf("%d",&year);
+    if (year%4==0){
+        printf("%d is a Leap year",year);
+    }
+    else{
+        printf("%d is not a leap year",year);
+    }
+}*/
+
+//Program 5
+//Convert Fahrenhite to Celsius
+/*#include<stdio.h>
+int main(){
+    float f,c;
+    printf("Enter fahrehite value: ");
+    scanf("%f",&f);
+    c=((f-32)*5)/9;
+    printf("%f C",c);
+    return 0;
+}*/
+
+//Program 6
+//Find the given no is positive or negative or zero
+
+#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter number:\n ");
+    scanf("%d",&num);
+    if (num>0){
+        printf("%d is a positive number",num);
+    }
+    else if (num==0){
+        printf("%d is zero",num);
+    }
+    else{
+        printf("%d is a negative number",num);
+    }
+}
+
+
+//Program 7
+//Find the given number is odd or even
+/*#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter number: ");
+    scanf("%d",&num);
+    if (num%2==0){
+        printf("%d is a even number",num);
+    }
+    else{
+        printf("%d is a odd number",num);
+    }
+}*/
