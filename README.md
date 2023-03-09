@@ -10,7 +10,7 @@
   
 
 <h5>
-I am going to upload programs and projects in this repo,I will try tries to cover almost every coding technique inorder to help the beignners learn and enjoy coding.
+I am going to upload programs and projects in this repo,I will try tries to cover almost every coding technique inorder to help the beginners learn and enjoy coding.
 <h5>
 
 
