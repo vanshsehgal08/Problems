@@ -9,7 +9,7 @@
 //P9: WAP to Pointers in Function call
 //P10: WAP to Check if char is vowel or not
 //P11: WAP to print Sum of digits
-//P12: WAP to Reverse the number
+//P12: WAP to Reverse the number.
 //P13: WAP to Find the given number is palindrome or not
 //P14: WAP to Find number of zeroes in given number
 //P15: WAP to Find biggest among 2 nos using ternary operator
