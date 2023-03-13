@@ -23,6 +23,19 @@
 //P23: WAP to Count no of odd nos in an array
 //P24: WAP to Reverse an array
 //P25: WAP to Print fibonacci series (Array)
+//P26: WAP to Sort the n numbers in ascending order
+//P27: WAP to find Transpose of a matrix
+//P28: WAP to print sum of two matrices
+//P29: WAP to print multiplication of two 3*3 matrix
+//P30: WAP to read and display untill null character is pointed
+//P31: WAP to read and display sentence
+//P32: WAP to read and display line
+//P33: WAP to read a sentence until $ appears and count no of uppercase lowercase char
+//P34: WAP to read a sentence until $ appears and count no of char,words,lines
+//P35: WAP to read a text and copy first n characters to another array
+//P36: WAP to read a text & copy mth to nth char into other array
+//P37: WAP to read a text & copy last n char into other array
+//P38: WAP to convert Uppercase letter to lowercase letter
 
 
 //P1: Area of square
@@ -532,7 +545,7 @@ void reverse(int arr[], int n) {
     }
 }
 
-//25: Print fibonacci series
+//P25: Print fibonacci series
 #include<stdio.h>
 int main() {
     int n;
@@ -548,3 +561,463 @@ int main() {
     printf("\n");
     return 0;
 }
+
+
+// P26: Sort the n numbers in ascending order
+#include<stdio.h>
+int main(){
+    int a[],i,j,n,temp;
+    printf("How many integers you wanna enter: ");
+    scanf("%d",&n);
+    i=0;
+    while (i<n){
+        scanf("%d",&a[i]);
+        i+=1;
+    }
+    i=0;
+    while (i<n){
+        j=i+1;
+        while (j<n){
+            if (a[i]>a[j]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+            j=j+1;
+        }
+        i=i+1;
+    }
+    printf("Numbers in inc order are: ");
+    i=0;
+    while (i<n){
+        printf("%d\t",a[i]);
+        i+=1;
+    }
+}
+
+
+//P27: Transpose of a matrix
+#include<stdio.h>
+int main() {
+   
+   
+   //Taking input of matrix
+   int a[3][3],b[3][3],i,j,;
+   printf("\nEnter First Matrix :\n ");
+   for (i=0;i<3;i++) {
+      for (j=0;j<3;j++) {
+         scanf("%d",&a[i][j]);
+      }
+   }
+
+  
+   //Transpose Logic
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+        b[i][j] = a[j][i];
+      }
+   }
+
+   printf("\nTranspose of Matrice : \n");
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+         printf(" %d ",b[i][j]);
+      }
+      printf("\n");
+   }
+
+   return 0;
+}
+
+
+//P28: Print sum of two matrices
+
+#include<stdio.h>
+int main() {
+   
+   
+   //Taking input of matrix-1 
+   int a[3][3],b[3][3],c[3][3],i,j,k;
+   printf("\nEnter First Matrix :\n ");
+   for (i=0;i<3;i++) {
+      for (j=0;j<3;j++) {
+         scanf("%d",&a[i][j]);
+      }
+   }
+
+    //Taking input of matrix-2
+   printf("\nEnter Second Matrix:\n ");
+   for (i=0;i<3;i++) {
+      for (j=0;j<3;j++) {
+         scanf("%d",&b[i][j]);
+      }
+   }
+
+  
+   //Addition Logic
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+        c[i][j] = a[i][j] + b[i][j];
+      }
+   }
+
+   printf("\nSum Of Two Matrices : \n");
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+         printf(" %d ",c[i][j]);
+      }
+      printf("\n");
+   }
+
+   return 0;
+}
+
+
+//P28: Print sum of two matrices
+#include<stdio.h>
+int main() {
+   
+   
+   //Taking input of matrix-1 
+   int a[3][3],b[3][3],c[3][3],i,j,k;
+   printf("\nEnter First Matrix :\n ");
+   for (i=0;i<3;i++) {
+      for (j=0;j<3;j++) {
+         scanf("%d",&a[i][j]);
+      }
+   }
+
+    //Taking input of matrix-2
+   printf("\nEnter Second Matrix:\n ");
+   for (i=0;i<3;i++) {
+      for (j=0;j<3;j++) {
+         scanf("%d",&b[i][j]);
+      }
+   }
+
+  
+   //Subtraction Logic
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+        c[i][j] = a[i][j] - b[i][j];
+      }
+   }
+
+   printf("\nSubtraction Of Two Matrices : \n");
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+         printf(" %d ",c[i][j]);
+      }
+      printf("\n");
+   }
+
+   return 0;
+}
+
+
+//P29: Print multiplication of two 3*3 matrix
+#include<stdio.h>
+int main() {
+   
+   
+   //Taking input of matrix-1 
+   int a[3][3],b[3][3],c[3][3],i,j,k;
+   printf("\nEnter First Matrix :\n ");
+   for (i=0;i<3;i++) {
+      for (j=0;j<3;j++) {
+         scanf("%d",&a[i][j]);
+      }
+   }
+
+    //Taking input of matrix-2
+   printf("\nEnter Second Matrix:\n ");
+   for (i=0;i<3;i++) {
+      for (j=0;j<3;j++) {
+         scanf("%d",&b[i][j]);
+      }
+   }
+
+  
+   //Multiplication Logic
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+         c[i][j]=0;
+         for (k=0;k<3;k++) {
+            c[i][j] =c[i][j]+ a[i][k]* b[k][j];
+         }
+      }
+   }
+
+   printf("\nMultiplication Of Two Matrices : \n");
+   for(i=0;i<3;i++) {
+      for(j=0;j<3;j++) {
+         printf(" %d ",c[i][j]);
+      }
+      printf("\n");
+   }
+
+   return 0;
+}
+
+
+//P30: Read and display untill null character is pointed
+#include<stdio.h>
+int main(){
+    char a[100];
+    int i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!=' '){
+        i+=1;
+        scanf("%c",&a[i]);
+    }
+    
+    i=0;
+    while (a[i]!='\0'){
+        printf("%c",a[i]);
+        i+=1;
+    }
+}
+
+
+
+//P31: Read and display sentence
+#include<stdio.h>
+int main(){
+    char a[100];
+    int i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='\n'){
+        i+=1;
+        scanf("%c",&a[i]);
+    }
+    
+    i=0;
+    while (a[i]!='\n'){
+        printf("%c",a[i]);
+        i+=1;
+    }
+}
+
+
+
+//P32:Read and display line
+#include<stdio.h>
+int main(){
+    char a[100];
+    int i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='.'){
+        i+=1;
+        scanf("%c",&a[i]);
+    }
+    
+    i=0;
+    while (a[i]!='.'){
+        printf("%c",a[i]);
+        i+=1;
+    }
+}
+
+
+//P33:Read a sentence until $ appears and count no of uppercase lowercase char
+#include<stdio.h>
+int main(){
+    char a[100];
+    int i,uc=0,lc=0;
+    printf("Enter Text\n");
+    i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='$'){
+        i++;
+        scanf("%c",&a[i]);
+    }
+    a[i] = '\0';  // Add null terminator to end of string
+    i=0;
+    while (a[i]!='\0') {
+        if (a[i] >= 'A' && a[i] <= 'Z') {
+            uc++;
+        }
+        else if (a[i] >= 'a' && a[i] <= 'z') {
+            lc++;
+        }
+    }
+    
+    printf("Uppercase count: %d\n", uc);
+    printf("Lowercase count: %d\n", lc);
+    
+    return 0;
+}
+
+
+
+    
+//P34: Read a sentence until $ appears and count no of char,words,lines
+#include<stdio.h>
+int main(){
+    char a[100];
+    int i,cc=0,cw=0,cl=0;
+    printf("Enter Text\n");
+    i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='$'){
+        i++;
+        scanf("%c",&a[i]);
+    }
+    a[i]='\0';
+    i=0;
+    while (a[i]!='\0'){
+        if (a[i]=='\n'){
+            cl++;
+        }
+        if ((a[i]!='\n' && a[i+1]=='\n')||(a[i]!=' ' && a[i+1]==' ')||(a[i]!='\t' && a[i+1]=='\t')){
+            cw++;
+        }
+        cc++;
+        i++;
+    }
+    printf("\nNo of words: %d",cw);
+    printf("\nNo of lines: %d",cl);
+    printf("\nNo of characters: %d",cc);
+}
+
+
+
+//P35: Read a text and copy first n characters to another array
+#include<stdio.h>
+int main(){
+    char a[100],b[100];
+    int i,n;
+    printf("\nEnter Text:\n")
+    i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='$'){
+        i++;
+        scanf("%c",&a[i]);
+    }
+    a[i]='\0';
+    printf("Enter value of n: ");
+    scanf("%d",&n);
+    i=0;
+    while(i<n){
+        b[i]=a[i];
+        i++;
+    }
+    b[i]='\0';
+    printf("\n\nThe left %d character of text: ",n);
+    i=0;
+    while(b[i]!='\0'){
+        printf("%c",b[i]);
+        i++;
+    }
+}
+
+
+
+//P36: Read a text & copy mth to nth char into other array
+#include<stdio.h>
+int main(){
+    char a[100],b[100];
+    int i,j,m,n;
+    printf("\nEnter Text:\n")
+    i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='$'){
+        i++;
+        scanf("%c",&a[i]);
+    }
+    a[i]='\0';
+    printf("Enter value of m,n: ");
+    scanf("%d %d",&m,&n);
+    i=m;
+    j=n;
+    while(i<n){
+        b[j]=a[i];
+        i++;
+        j++;
+    }
+    b[j]='\0';
+    printf("\n\nThe %dth to %dth character of text: ",m,n);
+    i=0;
+    while(b[i]!='\0'){
+        printf("%c",b[i]);
+        i++;
+    }
+}
+
+
+
+//P37: Read a text & copy last n char into other array
+#include<stdio.h>
+int main(){
+    char a[100],b[100];
+    int i,j,n;
+    printf("\nEnter Text:\n")
+    i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='$'){
+        i++;
+        scanf("%c",&a[i]);
+    }
+    a[i]='\0';
+    printf("Enter value of n: ");
+    scanf("%d",&n);
+    i=i-n;
+    j=0
+    while(a[i]!='\0'){
+        b[i]=a[i];
+        i++;
+        j++;
+    }
+    b[j]='\0';
+    printf("\n\nThe last %d character of text: ",n);
+    i=0;
+    while(b[i]!='\0'){
+        printf("%c",b[i]);
+        i++;
+    }
+}
+
+
+
+//P38: Convert Uppercase letter to lowercase letter
+#include<stdio.h>
+int main(){
+    char a[100],b[100];
+    int i,j;
+    printf("\nEnter Text:\n")
+    i=0;
+    scanf("%c",&a[i]);
+    while (a[i]!='$'){
+        i++;
+        scanf("%c",&a[i]);
+    }
+    a[i]='\0';
+    i=0;
+    j=0;
+    while(a[i]!='\0'){
+        if (a[i]>=65&&a[i]<=90){
+            b[j]=a[i]+32;
+        }
+        else{
+            b[j]=a[j];
+        }
+        i++;
+        j++;
+    }
+    b[j]='\0';
+    printf("\nUpper to Lower Text: \n");
+    i=0;
+    while(b[i]!='\0'){
+        printf("%c",b[i]);
+        i++;
+    }
+}
+
+
+
+
+
+
+
+
+
